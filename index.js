@@ -1,10 +1,12 @@
-'use strict'
+#!/usr/bin/env node
+'use strict';
 
 const { execSync, spawn } = require('child_process')
 const { PathPrompt } = require('inquirer-path')
 const inquirer = require('inquirer')
 const cmdify = require('cmdify')
 const path = require('path')
+const fse = require('fs-extra')
 const fs = require('fs')
 const os = require('os')
 
@@ -78,13 +80,15 @@ const init = () => {
     try {
       const { path: _path, port, vscode, override } = _
       if (override)
-        execSync(`rm -rf ${_path}`)
+        fse.emptyDirSync(_path)
 
-      fs.mkdirSync(_path, { recursive: true })
+      if (!fs.existsSync(_path))
+        fs.mkdirSync(_path, { recursive: true })
 
-      let script = fs.readFileSync(path.resolve('./sources/index.js'), 'utf8')
-      const pckg = fs.readFileSync(path.resolve('./sources/package.json'), 'utf8').replace(`"author": "",`, `"author": "${os.userInfo().username}",`)
-      const launch = fs.readFileSync(path.resolve('./sources/launch.json'), 'utf8')
+      const sourcesPath = `${execSync('npm root -g').toString().replace('\n', '')}/expressjs-gen/sources`
+      let script = fs.readFileSync(path.resolve(sourcesPath, './index.js'), 'utf8')
+      const pckg = fs.readFileSync(path.resolve(sourcesPath, './package.json'), 'utf8').replace(`"author": "",`, `"author": "${os.userInfo().username}",`)
+      const launch = fs.readFileSync(path.resolve(sourcesPath, './launch.json'), 'utf8')
 
       if (port !== 3000)
         script = script.replace(/3000/gm, port)

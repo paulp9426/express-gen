@@ -6,10 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "preferGlobal": true,
+  "bin": {
+    "expressjs-gen": "./index.js"
+  },
   "author": "Paul Paul",
   "license": "MIT",
   "dependencies": {
     "cmdify": "0.0.4",
+    "fs-extra": "^7.0.1",
     "inquirer": "^6.2.2",
     "inquirer-path": "^1.0.0-beta5"
   },
