@@ -1,0 +1,29 @@
+{
+  "name": "express-gen",
+  "version": "1.0.0",
+  "description": "Express Node.JS out of the box generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Paul",
+  "license": "MIT",
+  "dependencies": {
+    "cmdify": "0.0.4",
+    "inquirer": "^6.2.2",
+    "inquirer-path": "^1.0.0-beta5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulp9426/express-gen.git"
+  },
+  "keywords": [
+    "express",
+    "generator"
+  ],
+  "bugs": {
+    "url": "https://github.com/paulp9426/express-gen/issues"
+  },
+  "homepage": "https://github.com/paulp9426/express-gen#readme"
+}
