@@ -1,5 +1,5 @@
 {
-  "name": "express-gen",
+  "name": "expressjs-gen",
   "version": "1.0.0",
   "description": "Express Node.JS out of the box generator",
   "main": "index.js",
@@ -16,14 +16,14 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paulp9426/express-gen.git"
+    "url": "git+https://github.com/paulp9426/expressjs-gen.git"
   },
   "keywords": [
     "express",
     "generator"
   ],
   "bugs": {
-    "url": "https://github.com/paulp9426/express-gen/issues"
+    "url": "https://github.com/paulp9426/expressjs-gen/issues"
   },
-  "homepage": "https://github.com/paulp9426/express-gen#readme"
+  "homepage": "https://github.com/paulp9426/expressjs-gen#readme"
 }
