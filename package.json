@@ -1,6 +1,6 @@
 {
   "name": "expressjs-gen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Express Node.JS out of the box generator",
   "main": "index.js",
   "scripts": {
