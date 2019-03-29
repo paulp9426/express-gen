@@ -48,12 +48,13 @@ Follow the steps.
 ### `Folder structure`
 ```
 ┬ Instalation path
-├── index.js
-├── launch.json
-├── package-lock.json
-├── package.json
+├─┬ .vscode
+│ └── launch.json
 ├── node_modules
-└── .vscode
+│ └── ...
+├── index.js
+├── package-lock.json
+└── package.json
 ```
 
 ### `Code`
@@ -167,8 +168,8 @@ Get metadata pertaining to uploaded file(s).
         "encoding": "7bit",
         "mimetype": "text/plain",
         "destination": "./uploads",
-        "filename": "58975f442c3397c92d0dd24e60c38d58",
-        "path": "uploads/58975f442c3397c92d0dd24e60c38d58",
+        "filename": "4d5ea5b9d255848fb9f0db61d719ebc4",
+        "path": "uploads/4d5ea5b9d255848fb9f0db61d719ebc4",
         "size": 3157
     }
 ]
