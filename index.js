@@ -102,7 +102,7 @@ const init = () => {
       let i = 4
       const ui = new inquirer.ui.BottomBar({ bottomBar: loader[i % 4] })
       setInterval(() => { ui.updateBottomBar(loader[i++ % 4]) }, 300)
-      const cmd = spawn(cmdify('npm'), ['install', 'express', 'body-parser', '--save'], { stdio: 'pipe', cwd: _path })
+      const cmd = spawn(cmdify('npm'), ['install', 'express', 'body-parser', 'multer', '--save'], { stdio: 'pipe', cwd: _path })
       cmd.stdout.pipe(ui.log)
       cmd.on('close', _ => {
         ui.updateBottomBar(`Installation done at: ${_path}\n`)
